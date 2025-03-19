@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabajo sobre el 24 de Marzo - Estudiantes de la EPS 3</title>
+    <title>Mi Primera Página</title>
     <style>
         /* Estilos generales */
         body {
@@ -11,7 +11,6 @@
             background-color: #f0f8ff;
             margin: 0;
             padding: 0;
-            padding-bottom: 60px; /* Espacio para el pie de página */
         }
 
         header {
@@ -40,7 +39,9 @@
             color: white;
             text-align: center;
             padding: 10px 0;
+            position: fixed;
             width: 100%;
+            bottom: 0;
         }
 
         /* Estilos de navegación */
@@ -97,11 +98,60 @@
             display: flex;
             flex-direction: column;
         }
+
+        /* Estilos para el cuadro emergente */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            z-index: 100;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 50;
+        }
+
+        .popup-close {
+            display: block;
+            margin: 10px auto;
+            background-color: #f7c300;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
     </style>
+    <script>
+        // Función para mostrar el cuadro emergente
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('popup-overlay').style.display = 'block';
+        }
+
+        // Función para cerrar el cuadro emergente
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('popup-overlay').style.display = 'none';
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Bienvenidos a mi sitio web</h1>
+        <h1>Proyecto Educativo sobre el 24 de Marzo</h1>
         <p><strong>Este sitio web es un trabajo realizado por estudiantes de la EPS 3.</strong>  
             Su propósito es compartir información sobre una tarea relacionada con el 24 de marzo  
             y otros recursos relacionados. Aquí encontrarás enlaces a documentos  
@@ -110,17 +160,15 @@
 
     <nav>
         <ul>
-            <li><a href="#">Inicio</a></li>
+            <li><a href="javascript:void(0);" onclick="showPopup()">Inicio</a></li>
             <li><a href="https://drive.google.com/file/d/1QjMkAJJ1w_H9jO58rIcKPo6Chkxhio58/view?usp=drive_link">"30000 Voces"</a></li>
             <li><a href="https://www.canva.com/design/DAGiIAETDmY/2GkTdi4aw8rkEBIggRz65w/edit?utm_content=DAGiIAETDmY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Trabajo sobre 30000 Voces</a></li>
         </ul>
 
         <h2>Relacionados</h2>
         <div class="button-list">
-            <ul>
-                <li><a href="https://drive.google.com/file/d/1Tg1sqyHeM7Woo8CjDNg_cCt5Pvs3m0vK/view?usp=drive_link">Historia de María Montes</a></li>
-                <li><a href="https://drive.google.com/file/d/1-Vbs93BfpGl52VCvSDxP5m06b5nr-Ug0/view?usp=drive_link">Pájaros y Flores</a></li>
-            </ul>
+            <li><a href="https://drive.google.com/file/d/1Tg1sqyHeM7Woo8CjDNg_cCt5Pvs3m0vK/view?usp=drive_link">Enlace Relacionado 1</a></li>
+            <li><a href="https://drive.google.com/file/d/1-Vbs93BfpGl52VCvSDxP5m06b5nr-Ug0/view?usp=drive_link">Enlace Relacionado 2</a></li>
         </div>
     </nav>
 
@@ -130,6 +178,14 @@
            desarrollado en conjunto con las materias de <strong>Programación, Ciencias Sociales y Prácticas del Lenguaje</strong>.  
            A través de esta página, compartimos información y recursos sobre el trabajo realizado.</p>
     </section>
+
+    <!-- Cuadro emergente -->
+    <div id="popup-overlay" class="popup-overlay" onclick="closePopup()"></div>
+    <div id="popup" class="popup">
+        <h3>Bienvenido al sitio web</h3>
+        <p>Gracias por visitar este proyecto educativo relacionado con el 24 de marzo.</p>
+        <button class="popup-close" onclick="closePopup()">Cerrar</button>
+    </div>
 
     <footer>
         <p>&copy; 2025 Mi Sitio Web - Creado por estudiantes de la EPS 3</p>
