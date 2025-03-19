@@ -104,64 +104,26 @@
             flex-direction: column;
         }
 
-        /* Estilos para el cuadro emergente */
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            z-index: 100;
-        }
-
-        .popup-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 50;
-        }
-
-        .popup-close {
-            display: block;
-            margin: 10px auto;
-            background-color: #f7c300;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-        }
-
         /* Estilos para la imagen */
         .image-container {
             position: absolute;
-            top: 50%;  /* Centra verticalmente */
-            right: 20px; /* Coloca la imagen a la derecha */
-            transform: translateY(-50%); /* Ajusta el centrado vertical */
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
         }
 
         .image-container img {
-            width: 400px; /* Tamaño ajustado de la imagen */
+            width: 250px; /* Tamaño ajustado de la imagen */
             height: auto;
-            border-radius: 10px; /* Bordes redondeados */
+            border-radius: 10px;
         }
     </style>
     <script>
-        // Función para mostrar el cuadro emergente
         function showPopup() {
             document.getElementById('popup').style.display = 'block';
             document.getElementById('popup-overlay').style.display = 'block';
         }
 
-        // Función para cerrar el cuadro emergente
         function closePopup() {
             document.getElementById('popup').style.display = 'none';
             document.getElementById('popup-overlay').style.display = 'none';
@@ -171,10 +133,7 @@
 <body>
     <header>
         <h1>Proyecto Educativo sobre el 24 de Marzo</h1>
-        <p><strong>Este sitio web es un trabajo realizado por estudiantes de la EPS 3.</strong>  
-            Su propósito es compartir información sobre una tarea relacionada con el 24 de marzo  
-            y otros recursos relacionados. Aquí encontrarás enlaces a documentos  
-            y material adicional sobre la temática abordada.</p>
+        <p><strong>Este sitio web es un trabajo realizado por estudiantes de la EPS 3.</strong></p>
     </header>
 
     <nav>
@@ -185,25 +144,22 @@
         </ul>
     </nav>
 
-    <!-- Imagen a la derecha -->
     <div class="image-container">
         <img src="https://www.clacso.org/wp-content/uploads/2021/03/24-marzo-2021-FB2.jpg" alt="Imagen del 24 de marzo">
     </div>
 
     <section>
         <h2>Sobre mí</h2>
-        <p>Este es un pequeño párrafo donde me presento. Este sitio es parte de un proyecto educativo  
-           desarrollado en conjunto con las materias de <strong>Programación, Ciencias Sociales y Prácticas del Lenguaje</strong>.  
-           A través de esta página, compartimos información y recursos sobre el trabajo realizado.</p>
+        <p>Este sitio es parte de un proyecto educativo desarrollado en conjunto con las materias de <strong>Programación, Ciencias Sociales y Prácticas del Lenguaje</strong>.</p>
     </section>
 
-    <!-- Cuadro emergente -->
-    <div id="popup-overlay" class="popup-overlay" onclick="closePopup()"></div>
-    <div id="popup" class="popup">
-        <h3>Bienvenido al sitio web</h3>
-        <p>Gracias por visitar este proyecto educativo relacionado con el 24 de marzo.</p>
-        <button class="popup-close" onclick="closePopup()">Cerrar</button>
-    </div>
+    <section>
+        <h2>Relacionados</h2>
+        <div class="button-list">
+            <li><a href="https://drive.google.com/file/d/1Tg1sqyHeM7Woo8CjDNg_cCt5Pvs3m0vK/view?usp=drive_link">Enlace Relacionado 1</a></li>
+            <li><a href="https://drive.google.com/file/d/1-Vbs93BfpGl52VCvSDxP5m06b5nr-Ug0/view?usp=drive_link">Enlace Relacionado 2</a></li>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 Mi Sitio Web - Creado por estudiantes de la EPS 3</p>
