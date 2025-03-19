@@ -4,40 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Primera Página</title>
-    
     <style>
+        /* Estilos generales */
         body {
-            background-color: #f5f5f5; /* Color claro de fondo */
-            color: #222; /* Texto oscuro */
             font-family: Arial, sans-serif;
-            text-align: center;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
         }
+
         header {
-            background-color: #75AADB; /* Azul de la bandera */
+            background-color: #75aaff; /* Azul claro */
             color: white;
             padding: 20px;
+            text-align: center;
         }
-        nav ul {
+
+        header p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #0061a8;
+        }
+
+        footer {
+            background-color: #75aaff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Estilos de navegación */
+        nav {
+            margin: 20px;
+        }
+
+        ul {
             list-style: none;
             padding: 0;
         }
-        nav ul li {
-            display: inline;
-            margin: 10px;
+
+        li {
+            margin: 10px 0;
         }
-        nav a {
+
+        a {
             text-decoration: none;
-            color: #FFD700; /* Amarillo del sol */
+            background-color: #f7c300; /* Amarillo Sol */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
             font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
+
+        a:hover {
+            background-color: #f7a400; /* Amarillo más oscuro */
+            transform: scale(1.05);
+        }
+
+        a:active {
+            background-color: #c77d00;
+            transform: scale(1.1);
+        }
+
+        /* Estilos de la sección "Sobre mí" */
         section {
             padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        footer {
-            background-color: #3A913F; /* Verde del escudo */
-            color: white;
-            padding: 10px;
-            margin-top: 20px;
+
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Estilo para los botones "Relacionados" */
+        .button-list {
+            display: flex;
+            flex-direction: column;
         }
     </style>
 </head>
@@ -45,30 +104,24 @@
     <header>
         <h1>Bienvenidos a mi sitio web</h1>
         <p><strong>Este sitio web es un trabajo realizado por estudiantes de la EPS 3.</strong>  
-        Su propósito es compartir información sobre una tarea relacionada con el 24 de marzo  
-        y otros recursos relacionados. Aquí encontrarás enlaces a documentos  
-        y material adicional sobre la temática abordada.</p>
+            Su propósito es compartir información sobre una tarea relacionada con el 24 de marzo  
+            y otros recursos relacionados. Aquí encontrarás enlaces a documentos  
+            y material adicional sobre la temática abordada.</p>
     </header>
+
     <nav>
         <ul>
             <li><a href="#">Inicio</a></li>
             <li><a href="https://drive.google.com/file/d/1QjMkAJJ1w_H9jO58rIcKPo6Chkxhio58/view?usp=drive_link">"30000 Voces"</a></li>
             <li><a href="https://www.canva.com/design/DAGiIAETDmY/2GkTdi4aw8rkEBIggRz65w/edit?utm_content=DAGiIAETDmY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Trabajo sobre 30000 Voces</a></li>
         </ul>
+
         <h2>Relacionados</h2>
-        <ul>
+        <div class="button-list">
             <li><a href="https://drive.google.com/file/d/1Tg1sqyHeM7Woo8CjDNg_cCt5Pvs3m0vK/view?usp=drive_link">Enlace Relacionado 1</a></li>
             <li><a href="https://drive.google.com/file/d/1-Vbs93BfpGl52VCvSDxP5m06b5nr-Ug0/view?usp=drive_link">Enlace Relacionado 2</a></li>
-        </ul>
+        </div>
     </nav>
+
     <section>
-        <h2>Sobre mí</h2>
-        <p>Este es un pequeño párrafo donde me presento. Este sitio es parte de un proyecto educativo  
-        desarrollado en conjunto con las materias de <strong>Programación, Ciencias Sociales y Prácticas del Lenguaje</strong>.  
-        A través de esta página, compartimos información y recursos sobre el trabajo realizado.</p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Mi Sitio Web - Creado por estudiantes de la EPS 3</p>
-    </footer>
-</body>
-</html>
+        <h2>So
