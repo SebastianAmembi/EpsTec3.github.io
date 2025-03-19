@@ -17,24 +17,10 @@
         }
 
         header {
-            background-color: #75aaff; /* Azul claro */
+            background-color: #75aaff;
             color: white;
             padding: 20px;
             text-align: center;
-        }
-
-        header p {
-            font-size: 18px;
-            line-height: 1.5;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        h2 {
-            color: #0061a8;
         }
 
         footer {
@@ -48,9 +34,6 @@
         /* Estilos de navegación */
         nav {
             margin: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
         ul {
@@ -65,7 +48,7 @@
 
         a {
             text-decoration: none;
-            background-color: #f7c300; /* Amarillo Sol */
+            background-color: #f7c300;
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
@@ -75,47 +58,49 @@
         }
 
         a:hover {
-            background-color: #f7a400; /* Amarillo más oscuro */
+            background-color: #f7a400;
             transform: scale(1.05);
         }
 
-        a:active {
-            background-color: #c77d00;
-            transform: scale(1.1);
+        /* Estilos del popup */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
         }
 
-        /* Estilos de la sección "Sobre mí" */
-        section {
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
             padding: 20px;
-            margin: 20px;
-            background-color: #fff;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 50%;
         }
 
-        section p {
-            font-size: 18px;
-            line-height: 1.6;
+        .popup button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #f7c300;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
-        /* Estilo para los botones "Relacionados" */
-        .button-list {
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Estilos para la imagen */
-        .image-container {
-            position: absolute;
-            top: 40%; /* Subir la imagen */
-            right: 20px;
-            transform: translateY(-50%);
-        }
-
-        .image-container img {
-            width: 700px; /* Hacer la imagen más grande */
-            height: auto;
-            border-radius: 10px;
+        .popup button:hover {
+            background-color: #f7a400;
         }
     </style>
     <script>
@@ -133,28 +118,23 @@
 <body>
     <header>
         <h1>Proyecto Educativo sobre el 24 de Marzo</h1>
-        <p><strong>Este sitio web es un trabajo realizado por estudiantes de la EPS 3.</strong></p>
     </header>
 
     <nav>
         <ul>
             <li><a href="javascript:void(0);" onclick="showPopup()">Inicio</a></li>
-            <li><a href="https://drive.google.com/file/d/1QjMkAJJ1w_H9jO58rIcKPo6Chkxhio58/view?usp=drive_link">"30000 Voces"</a></li>
-            <li><a href="https://www.canva.com/design/DAGiIAETDmY/2GkTdi4aw8rkEBIggRz65w/edit?utm_content=DAGiIAETDmY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Trabajo sobre 30000 Voces</a></li>
         </ul>
     </nav>
 
-    <div class="image-container">
-        <img src="https://www.clacso.org/wp-content/uploads/2021/03/24-marzo-2021-FB2.jpg" alt="Imagen del 24 de marzo">
+    <div id="popup-overlay" class="popup-overlay" onclick="closePopup()"></div>
+    <div id="popup" class="popup">
+        <h2>Bienvenido</h2>
+        <p>Este es un proyecto educativo desarrollado por estudiantes de la EPS 3.</p>
+        <button onclick="closePopup()">Cerrar</button>
     </div>
 
-    <section>
-        <h2>Sobre mí</h2>
-        <p>Este sitio es parte de un proyecto educativo desarrollado en conjunto con las materias de <strong>Programación, Ciencias Sociales y Prácticas del Lenguaje</strong>.</p>
-    </section>
-
-    <section>
-        <h2>Relacionados</h2>
-        <div class="button-list">
-            <li><a href="https://drive.google.com/file/d/1Tg1sqyHeM7Woo8CjDNg_cCt5Pvs3m0vK/view?usp=drive_link">Enlace Relacionado 1</a></li>
-            <li><a href="https://drive.google.com
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web - Creado por estudiantes de la EPS 3</p>
+    </footer>
+</body>
+</html>
