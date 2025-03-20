@@ -23,17 +23,16 @@
             text-align: center;
         }
 
-        footer {
-            background-color: #75aaff;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: auto;
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
         }
 
-        /* Estilos de navegación */
         nav {
             margin: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         ul {
@@ -71,6 +70,7 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
         }
 
         .popup {
@@ -84,24 +84,28 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
-            width: 50%;
+            z-index: 1000;
+            width: 300px;
+        }
+
+        .popup h2 {
+            margin-top: 0;
         }
 
         .popup button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #f7c300;
-            border: none;
+            background-color: #75aaff;
             color: white;
+            border: none;
+            padding: 10px 15px;
             cursor: pointer;
-            font-weight: bold;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            margin-top: 10px;
         }
 
         .popup button:hover {
-            background-color: #f7a400;
+            background-color: #5080d1;
         }
+
     </style>
     <script>
         function showPopup() {
@@ -118,23 +122,43 @@
 <body>
     <header>
         <h1>Proyecto Educativo sobre el 24 de Marzo</h1>
+        <p><strong>Este sitio web es un trabajo realizado por estudiantes de la EPS 3.</strong></p>
     </header>
 
     <nav>
         <ul>
             <li><a href="javascript:void(0);" onclick="showPopup()">Inicio</a></li>
+            <li><a href="https://drive.google.com/file/d/1QjMkAJJ1w_H9jO58rIcKPo6Chkxhio58/view?usp=drive_link">"30000 Voces"</a></li>
+            <li><a href="https://www.canva.com/design/DAGiIAETDmY/2GkTdi4aw8rkEBIggRz65w/edit?utm_content=DAGiIAETDmY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Trabajo sobre 30000 Voces</a></li>
         </ul>
     </nav>
 
+    <div class="image-container">
+        <img src="https://www.clacso.org/wp-content/uploads/2021/03/24-marzo-2021-FB2.jpg" alt="Imagen del 24 de marzo">
+    </div>
+
+    <section>
+        <h2>Sobre mí</h2>
+        <p>Este sitio es parte de un proyecto educativo desarrollado en conjunto con las materias de <strong>Programación, Ciencias Sociales y Prácticas del Lenguaje</strong>.</p>
+    </section>
+
+    <section>
+        <h2>Relacionados</h2>
+        <div class="button-list">
+            <li><a href="https://drive.google.com/file/d/1Tg1sqyHeM7Woo8CjDNg_cCt5Pvs3m0vK/view?usp=drive_link">Enlace Relacionado 1</a></li>
+        </div>
+    </section>
+
+    <!-- Popup -->
     <div id="popup-overlay" class="popup-overlay" onclick="closePopup()"></div>
     <div id="popup" class="popup">
         <h2>Bienvenido</h2>
-        <p>Este es un proyecto educativo desarrollado por estudiantes de la EPS 3.</p>
+        <p>Este es un sitio educativo sobre el 24 de marzo.</p>
         <button onclick="closePopup()">Cerrar</button>
     </div>
 
     <footer>
-        <p>&copy; 2025 Mi Sitio Web - Creado por estudiantes de la EPS 3</p>
+        <p>&copy; 2025 EPS TEC 3 - Proyecto Educativo</p>
     </footer>
 </body>
 </html>
